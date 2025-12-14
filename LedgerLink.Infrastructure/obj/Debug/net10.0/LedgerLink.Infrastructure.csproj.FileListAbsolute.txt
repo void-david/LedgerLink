@@ -15,3 +15,4 @@
 /home/david/Documents/chamba/LedgerLink/LedgerLink.Infrastructure/obj/Debug/net10.0/refint/LedgerLink.Infrastructure.dll
 /home/david/Documents/chamba/LedgerLink/LedgerLink.Infrastructure/obj/Debug/net10.0/LedgerLink.Infrastructure.pdb
 /home/david/Documents/chamba/LedgerLink/LedgerLink.Infrastructure/obj/Debug/net10.0/ref/LedgerLink.Infrastructure.dll
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Infrastructure/obj/Debug/net10.0/LedgerLink.Infrastructure.sourcelink.json

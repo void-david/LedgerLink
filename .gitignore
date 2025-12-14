@@ -1,0 +1,13 @@
+# Build outputs
+**/bin/
+**/obj/
+*.pdb
+*.dll
+*.exe
+*.log
+
+# VS/VS Code
+.vs/
+.vscode/
+*.user
+*.suo

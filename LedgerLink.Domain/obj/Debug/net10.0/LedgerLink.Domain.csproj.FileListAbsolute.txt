@@ -9,3 +9,4 @@
 /home/david/Documents/chamba/LedgerLink/LedgerLink.Domain/obj/Debug/net10.0/refint/LedgerLink.Domain.dll
 /home/david/Documents/chamba/LedgerLink/LedgerLink.Domain/obj/Debug/net10.0/LedgerLink.Domain.pdb
 /home/david/Documents/chamba/LedgerLink/LedgerLink.Domain/obj/Debug/net10.0/ref/LedgerLink.Domain.dll
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Domain/obj/Debug/net10.0/LedgerLink.Domain.sourcelink.json

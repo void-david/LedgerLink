@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LedgerLink.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56c2afd843aee43ba6dbf5d8ed3ac5ef0c425438")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51336d90d9fbdbfb004cda65251974d39288f0dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("LedgerLink.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LedgerLink.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

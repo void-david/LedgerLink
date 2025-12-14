@@ -13,3 +13,4 @@
 /home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/refint/LedgerLink.Application.dll
 /home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/LedgerLink.Application.pdb
 /home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/ref/LedgerLink.Application.dll
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/LedgerLink.Application.sourcelink.json
