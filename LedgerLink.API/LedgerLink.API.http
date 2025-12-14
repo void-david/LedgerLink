@@ -1,0 +1,6 @@
+@LedgerLink.API_HostAddress = http://localhost:5030
+
+GET {{LedgerLink.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

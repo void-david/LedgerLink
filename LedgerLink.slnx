@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="LedgerLink.API/LedgerLink.API.csproj" />
+  <Project Path="LedgerLink.Application/LedgerLink.Application.csproj" />
+  <Project Path="LedgerLink.Domain/LedgerLink.Domain.csproj" />
+  <Project Path="LedgerLink.Infrastructure/LedgerLink.Infrastructure.csproj" />
+</Solution>

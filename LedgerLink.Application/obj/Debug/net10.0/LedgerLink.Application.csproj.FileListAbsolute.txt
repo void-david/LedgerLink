@@ -1,0 +1,15 @@
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/bin/Debug/net10.0/LedgerLink.Application.deps.json
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/bin/Debug/net10.0/LedgerLink.Application.dll
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/bin/Debug/net10.0/LedgerLink.Application.pdb
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/bin/Debug/net10.0/LedgerLink.Domain.dll
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/bin/Debug/net10.0/LedgerLink.Domain.pdb
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/LedgerLink.Application.csproj.AssemblyReference.cache
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/LedgerLink.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/LedgerLink.Application.AssemblyInfoInputs.cache
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/LedgerLink.Application.AssemblyInfo.cs
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/LedgerLink.Application.csproj.CoreCompileInputs.cache
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/LedgerLi.3E494ECA.Up2Date
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/LedgerLink.Application.dll
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/refint/LedgerLink.Application.dll
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/LedgerLink.Application.pdb
+/home/david/Documents/chamba/LedgerLink/LedgerLink.Application/obj/Debug/net10.0/ref/LedgerLink.Application.dll
