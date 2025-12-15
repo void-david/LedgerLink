@@ -4,6 +4,7 @@ using LedgerLink.Application.Features.Services.Commands.UpdateService;
 using LedgerLink.Application.Features.Services.Queries.GetServices;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LedgerLink.API.Controllers;
 
@@ -26,6 +27,7 @@ public class ServicesController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize] // Route Locked
     public async Task<ActionResult<int>> Create(CreateServiceCommand command)
     {
         // Just throw the command at the meadiator
@@ -35,6 +37,7 @@ public class ServicesController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Authorize] // Route Locked
     public async Task<ActionResult> Update(int id, UpdateServiceCommand command)
     {
         if (id != command.Id) return BadRequest();
@@ -43,6 +46,7 @@ public class ServicesController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize] // Route Locked
     public async Task<ActionResult> Delete(int id)
     {
         await _mediator.Send(new DeleteServiceCommand(id));
