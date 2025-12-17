@@ -4,6 +4,7 @@ using LedgerLink.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LedgerLink.Infrastructure.Migrations
 {
     [DbContext(typeof(LedgerLinkDbContext))]
-    partial class LedgerLinkDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251217033514_AddClients2")]
+    partial class AddClients2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

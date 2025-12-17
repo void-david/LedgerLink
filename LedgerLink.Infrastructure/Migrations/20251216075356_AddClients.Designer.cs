@@ -4,6 +4,7 @@ using LedgerLink.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LedgerLink.Infrastructure.Migrations
 {
     [DbContext(typeof(LedgerLinkDbContext))]
-    partial class LedgerLinkDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251216075356_AddClients")]
+    partial class AddClients
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,14 +55,13 @@ namespace LedgerLink.Infrastructure.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("UserId")
-                        .IsUnique()
-                        .HasFilter("[UserId] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("Clients");
                 });
@@ -203,7 +205,9 @@ namespace LedgerLink.Infrastructure.Migrations
                 {
                     b.HasOne("LedgerLink.Domain.Entities.User", "User")
                         .WithOne("ClientProfile")
-                        .HasForeignKey("LedgerLink.Domain.Entities.Client", "UserId");
+                        .HasForeignKey("LedgerLink.Domain.Entities.Client", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
