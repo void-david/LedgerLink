@@ -7,7 +7,7 @@ using LedgerLink.Application.Features.Clients.Queries.GetClients;
 
 namespace LedgerLink.API.Controllers;
 
-//[Authorize]
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class ClientsController : ControllerBase
