@@ -1,4 +1,5 @@
 using LedgerLink.Application.Features.Auth.Commands.Login;
+using LedgerLink.Application.Features.Auth.Commands.Register;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,4 +29,19 @@ public class AuthController : ControllerBase
             return Unauthorized(ex.Message);
         }
     }
+
+    [HttpPost("register")]
+    public async Task<ActionResult<int>> Register(RegisterUserCommand command)
+    {
+        try
+        {
+            var userId = await _mediator.Send(command);
+            return Ok(userId);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
 }
