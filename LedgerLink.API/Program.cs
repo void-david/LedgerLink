@@ -34,6 +34,7 @@ builder.Services.AddAuthentication(options =>
 
 // 1.2 Configure services
 
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
