@@ -1,8 +1,11 @@
 using LedgerLink.Application.Features.Requests.Commands.CreateRequest;
 using LedgerLink.Application.Features.Requests.Queries.GetMyRequests;
+using LedgerLink.Application.Features.Requests.Dtos;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using LedgerLink.Application.Features.Requests.Queries.GetAllRequests;
+using LedgerLink.Application.Features.Requests.Commands.UpdateStatus;
 
 namespace LedgerLink.API.Controllers;
 
@@ -30,6 +33,22 @@ public class RequestsController : ControllerBase
     {
         var result = await _mediator.Send(new GetMyRequestsQuery());
         return Ok(result);
+    }
+
+    [HttpGet]
+    [Authorize(Roles = "Admin")]
+    public async Task<ActionResult<List<ServiceRequestDto>>> GetAll()
+    {
+        return Ok(await _mediator.Send(new GetAllRequestsQuery()));
+    }
+
+    [HttpPut("{id}/status")]
+    [Authorize(Roles = "Admin")]
+    public async Task<ActionResult> UpdateStatus(int id, UpdateRequestStatusCommand command)
+    {
+        if (id != command.Id) return BadRequest();
+        await _mediator.Send(command);
+        return NoContent();
     }
     
 }
