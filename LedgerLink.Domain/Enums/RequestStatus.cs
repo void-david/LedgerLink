@@ -4,7 +4,7 @@ public enum RequestStatus
 {
     Pending,
     InReview,
-    ActionRequired,
+    // ActionRequired,
     Completed, 
     Rejected
 }

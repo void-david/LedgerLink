@@ -9,6 +9,7 @@ public class ServiceRequestDto
     public decimal Price { get; set; }
     public string Status { get; set; } = string.Empty; // Comes from enum of status
     public string ClientName { get; set; } = string.Empty;
+    public string Notes { get; set; } = string.Empty;
     public DateTime CreatedAt { get; set; }
 
 }

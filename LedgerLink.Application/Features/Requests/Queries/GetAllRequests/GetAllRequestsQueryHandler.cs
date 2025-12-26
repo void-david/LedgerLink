@@ -26,7 +26,8 @@ public class GetAllRequestsQueryHandler : IRequestHandler<GetAllRequestsQuery, L
                Price = r.Service.BasePrice,
                Status = r.Status.ToString(),
                CreatedAt = r.CreatedAt,
-               ClientName = r.Client!.Name // New field
+               ClientName = r.Client!.Name, // New field
+               Notes = r.Notes
             })
             .OrderByDescending(r => r.CreatedAt)
             .ToListAsync(cancellationToken);

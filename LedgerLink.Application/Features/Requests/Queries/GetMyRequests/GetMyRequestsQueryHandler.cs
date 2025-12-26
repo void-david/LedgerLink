@@ -36,6 +36,7 @@ public class GetMyRequestsQueryHandler : IRequestHandler<GetMyRequestsQuery, Lis
                 ServiceName = r.Service!.Name,
                 Price = r.Service.BasePrice,
                 Status = r.Status.ToString(),
+                Notes = r.Notes,
                 CreatedAt = r.CreatedAt
             })
             .OrderByDescending(r => r.CreatedAt)
