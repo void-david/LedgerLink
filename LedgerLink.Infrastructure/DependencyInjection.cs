@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using LedgerLink.Infrastructure.Authentication;
+using LedgerLink.Infrastructure.Services;
 
 namespace LedgerLink.Infrastructure;
 
@@ -17,6 +18,7 @@ public static class DependencyInjection
 
         services.AddScoped<IApplicationDbContext, LedgerLinkDbContext>();
         services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+        services.AddScoped<IFileService, LocalFileService>();
 
         return services;
     }
