@@ -12,4 +12,6 @@ public class ServiceRequestDto
     public string Notes { get; set; } = string.Empty;
     public DateTime CreatedAt { get; set; }
 
+    public List<DocumentDto> Documents { get; set; } = new();
+
 }

@@ -27,8 +27,10 @@ public class GetMyRequestsQueryHandler : IRequestHandler<GetMyRequestsQuery, Lis
 
         // Filter the requests where Request -> Client -> UserID matches token
         return await _context.ServiceRequests
+            .AsNoTracking()
             .Include(r => r.Service)
             .Include(r => r.Client)
+            .Include(r => r.Documents)
             .Where(r => r.Client!.UserId == userId)
             .Select(r => new ServiceRequestDto
             {
@@ -37,7 +39,12 @@ public class GetMyRequestsQueryHandler : IRequestHandler<GetMyRequestsQuery, Lis
                 Price = r.Service.BasePrice,
                 Status = r.Status.ToString(),
                 Notes = r.Notes,
-                CreatedAt = r.CreatedAt
+                CreatedAt = r.CreatedAt,
+                Documents = r.Documents.Select(d => new DocumentDto
+                {
+                    Id = d.Id,
+                    FileName = d.FileName
+                }).ToList()
             })
             .OrderByDescending(r => r.CreatedAt)
             .ToListAsync(cancellationToken);

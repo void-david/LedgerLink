@@ -17,8 +17,10 @@ public class GetAllRequestsQueryHandler : IRequestHandler<GetAllRequestsQuery, L
     public async Task<List<ServiceRequestDto>> Handle(GetAllRequestsQuery request, CancellationToken cancellationToken)
     {
         return await _context.ServiceRequests
+            .AsNoTracking()
             .Include(r => r.Service)
             .Include(r => r.Client) // Need client info
+            .Include(r => r.Documents)
             .Select(r => new ServiceRequestDto
             {
                Id = r.Id,
@@ -26,8 +28,14 @@ public class GetAllRequestsQueryHandler : IRequestHandler<GetAllRequestsQuery, L
                Price = r.Service.BasePrice,
                Status = r.Status.ToString(),
                CreatedAt = r.CreatedAt,
-               ClientName = r.Client!.Name, // New field
-               Notes = r.Notes
+               ClientName = r.Client!.Name, 
+               Notes = r.Notes,
+               Documents = r.Documents.Select(d =>new DocumentDto
+               {
+                    Id = d.Id,
+                    FileName = d.FileName
+               }).ToList()
+
             })
             .OrderByDescending(r => r.CreatedAt)
             .ToListAsync(cancellationToken);
