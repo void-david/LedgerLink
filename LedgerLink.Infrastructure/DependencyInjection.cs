@@ -18,8 +18,8 @@ public static class DependencyInjection
 
         services.AddScoped<IApplicationDbContext, LedgerLinkDbContext>();
         services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
-        services.AddScoped<IFileService, LocalFileService>();
-
+        //services.AddScoped<IFileService, LocalFileService>();
+        services.AddScoped<IFileService, AzureBlobFileService>();
         return services;
     }
 }
